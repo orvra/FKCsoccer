@@ -10,6 +10,7 @@ import TournamentFormat from "./pages/TournamentFormat";
 import PrizeMoney from "./pages/PrizeMoney";
 import Eligibility from "./pages/Eligibility";
 import Register from "./pages/Register";
+import Match from "./pages/Match";
 
 function App() {
   return (
