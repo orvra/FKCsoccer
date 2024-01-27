@@ -3,7 +3,7 @@ import groupsData from "../data/groupsData";
 import schedule from "../data/sched2";
 import results from "../data/results";
 import teamsData from "../data/teamsData";
-import { useState } from "react";
+import teamResults from "../functions/teamResults";
 import { useWindowSize } from "@uidotdev/usehooks";
 import { RiCheckboxCircleFill, RiCloseCircleFill } from "react-icons/ri";
 import { BsFillDashCircleFill } from "react-icons/bs";
@@ -11,68 +11,8 @@ import { BsFillDashCircleFill } from "react-icons/bs";
 const teamStats = teamsData.map((team) => ({
   id: team.id,
   name: team.name,
-  ...gamesPlayed(team.id),
+  ...teamResults(team.id),
 }));
-
-function gamesPlayed(team) {
-  let played = 0;
-  let goalsScored = 0;
-  let goalsAgainst = 0;
-  let wins = 0;
-  let draws = 0;
-  let losses = 0;
-  let latestResults = "";
-  results.forEach((result) => {
-    if (
-      result.awayTeamScore !== "TBD" &&
-      (schedule[result.id - 1].homeTeam === team ||
-        schedule[result.id - 1].awayTeam === team)
-    ) {
-      played++;
-      if (schedule[result.id - 1].homeTeam === team) {
-        goalsScored += result.homeTeamScore;
-        goalsAgainst += result.awayTeamScore;
-        if (result.homeTeamScore > result.awayTeamScore) {
-          wins++;
-          latestResults += "W";
-        } else if (result.homeTeamScore < result.awayTeamScore) {
-          losses++;
-          latestResults += "L";
-        } else {
-          draws++;
-          latestResults += "D";
-        }
-      } else if (schedule[result.id - 1].awayTeam === team) {
-        goalsScored += result.awayTeamScore;
-        goalsAgainst += result.homeTeamScore;
-        if (result.homeTeamScore < result.awayTeamScore) {
-          wins++;
-          latestResults += "W";
-        } else if (result.homeTeamScore > result.awayTeamScore) {
-          losses++;
-          latestResults += "L";
-        } else {
-          draws++;
-          latestResults += "D";
-        }
-      }
-    }
-  });
-
-  const goalDifference = goalsScored - goalsAgainst;
-  const points = wins * 3 + draws;
-  return {
-    played,
-    wins,
-    draws,
-    losses,
-    goalsScored,
-    goalsAgainst,
-    goalDifference,
-    points,
-    latestResults,
-  };
-}
 
 console.log(teamStats);
 

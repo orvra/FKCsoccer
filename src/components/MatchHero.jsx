@@ -17,7 +17,7 @@ function MatchHero({ matchId = 1, result = 1 }) {
           {schedule[matchId - 1].stadium}
         </p>
         <div className="flex w-full items-center">
-          <div className="flex-1 flex space-x-2 justify-end items-center md:space-x-3">
+          <div className="flex-1 flex space-x-2 justify-end text-right items-center md:space-x-3">
             <h1 className="text-sm font-medium md:text-3xl md:font-bold">
               {teamsData[schedule[matchId - 1].homeTeam - 1].name}
             </h1>
