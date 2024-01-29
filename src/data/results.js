@@ -115,56 +115,56 @@ const results = [
   {
     id: 17,
 
-    homeTeamScore: "TBD",
-    awayTeamScore: "TBD",
+    homeTeamScore: 3,
+    awayTeamScore: 4,
   },
   {
     id: 18,
 
-    homeTeamScore: "TBD",
-    awayTeamScore: "TBD",
+    homeTeamScore: 4,
+    awayTeamScore: 1,
   },
 
   // Team 6 vs Team 10 matches
   {
     id: 19,
 
-    homeTeamScore: "TBD",
-    awayTeamScore: "TBD",
+    homeTeamScore: 6,
+    awayTeamScore: 2,
   },
   {
     id: 20,
 
-    homeTeamScore: "TBD",
-    awayTeamScore: "TBD",
+    homeTeamScore: 0,
+    awayTeamScore: 2,
   },
 
   // Team 6 vs Team 14 matches
   {
     id: 21,
 
-    homeTeamScore: "TBD",
-    awayTeamScore: "TBD",
+    homeTeamScore: 1,
+    awayTeamScore: 3,
   },
   {
     id: 22,
 
-    homeTeamScore: "TBD",
-    awayTeamScore: "TBD",
+    homeTeamScore: 2,
+    awayTeamScore: 2,
   },
 
   // Team 10 vs Team 14 matches
   {
     id: 23,
 
-    homeTeamScore: "TBD",
-    awayTeamScore: "TBD",
+    homeTeamScore: 4,
+    awayTeamScore: 2,
   },
   {
     id: 24,
 
-    homeTeamScore: "TBD",
-    awayTeamScore: "TBD",
+    homeTeamScore: 5,
+    awayTeamScore: 6,
   },
 
   // GROUP C //

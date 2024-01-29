@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import HomeHero from "../components/HomeHero";
 import Standings from "./Standings";
 import ScoreSlider from "../components/ScoreSlider";
@@ -16,10 +17,12 @@ function Home() {
               <ScoreSlider />
             </div>
             <button className="btn btn-outline btn-accent w-[14%] mr-2 hidden md:block">
-              <div className="flex items-center space-x-1 justify-center">
-                <TbSoccerField className="text-[20px] rotate-90" />
-                <p>See all matches</p>
-              </div>
+              <Link to="/schedule">
+                <div className="flex items-center space-x-1 justify-center">
+                  <TbSoccerField className="text-[20px] rotate-90" />
+                  <p>See all matches</p>
+                </div>
+              </Link>
             </button>
           </div>
         </div>

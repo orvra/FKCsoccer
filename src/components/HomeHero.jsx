@@ -1,14 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { IoIosArrowForward } from "react-icons/io";
+
 function HomeHero() {
   return (
     <div className="py-6 grid grid-cols-1 lg:grid-cols-3 gap-x-4">
-      <div className="group aspect-video rounded overflow-hidden border border-cyan-700 lg:col-span-2">
+      <div className="relative group aspect-video rounded overflow-hidden border border-cyan-700 lg:col-span-2">
         <Link to="/register">
           <img
             className=" transition-transform duration-300 ease-in-out transform-gpu group-hover:scale-110"
             src="/images/hero/game2.jpg"
+            alt="soccer"
           />
+          <div className="flex absolute bottom-0 left-0 pb-8 pl-8 font-medium text-2xl sm:text-3xl">
+            <h2>Register</h2>
+            <IoIosArrowForward className="self-end group-hover:text-red-400" />
+          </div>
         </Link>
       </div>
 

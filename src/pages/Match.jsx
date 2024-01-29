@@ -6,6 +6,7 @@ import teamsData from "../data/teamsData";
 import teamResults from "../functions/teamResults";
 import schedule from "../data/sched2";
 import FormGuide from "../components/FormGuide";
+import teamStatistics from "../functions/teamStatistics";
 
 function Match() {
   const { matchId } = useParams();
@@ -14,14 +15,13 @@ function Match() {
   const parsedId = parseInt(matchId.match(/^\d+/));
   const homeTeamStats = {
     id: schedule[parsedId - 1].homeTeam,
-    ...teamResults(schedule[parsedId - 1].homeTeam),
+    ...teamStatistics(schedule[parsedId - 1].homeTeam),
   };
   const awayTeamStats = {
     id: schedule[parsedId - 1].awayTeam,
-    ...teamResults(schedule[parsedId - 1].awayTeam),
+    ...teamStatistics(schedule[parsedId - 1].awayTeam),
   };
 
-  console.log(awayTeamStats);
   return (
     <div>
       <MatchHero matchId={parsedId} />
@@ -39,9 +39,9 @@ function Match() {
             <h1 className="pt-8 pb-5 font-bold text-3xl base-100">
               Team Stats
             </h1>
-            <div className="grid grid-cols-3 w-[95%] max-w-[650px] border border-gray-300 rounded base-100 pt-3 my-2 text-sm bg-white text-center grid-container">
+            <div className="grid grid-cols-3 w-[95%] max-w-[650px] border border-gray-300 rounded base-100 pt-3 pb-1 my-2 text-xs bg-white text-center grid-container">
               <div className="flex pb-2 justify-center space-x-2 border-b">
-                <h2 className="font-medium">
+                <h2 className="font-medium text-sm">
                   {teamsData[homeTeamStats.id - 1].name}
                 </h2>
                 <img
@@ -57,61 +57,157 @@ function Match() {
                   src={teamsData[awayTeamStats.id - 1].logo}
                   alt="awayTeam"
                 />
-                <h2 className="font-medium">
+                <h2 className="font-medium text-sm">
                   {teamsData[awayTeamStats.id - 1].name}
                 </h2>
               </div>
-              <div className="row-start-2 col-start-2 py-2">Position</div>
-              <div className="row-start-2 col-start-1 py-2">Position</div>
-              <div className="row-start-2 col-start-3 py-2">Position</div>
+              <div className="row-start-2 col-start-2 py-2">Rank</div>
+              <div
+                className={
+                  homeTeamStats.rank < awayTeamStats.rank
+                    ? "row-start-2 col-start-1 py-2 font-bold"
+                    : "row-start-2 col-start-1 py-2"
+                }
+              >
+                {homeTeamStats.rank}
+              </div>
+              <div
+                className={
+                  awayTeamStats.rank < homeTeamStats.rank
+                    ? "row-start-2 col-start-3 py-2 font-bold"
+                    : "row-start-2 col-start-3 py-2"
+                }
+              >
+                {awayTeamStats.rank}
+              </div>
               <div className="row-start-3 col-start-2 py-2">Wins</div>
-              <div className="row-start-3 col-start-1 py-2">
+              <div
+                className={
+                  homeTeamStats.wins > awayTeamStats.wins
+                    ? "row-start-3 col-start-1 py-2 font-bold"
+                    : "row-start-3 col-start-1 py-2"
+                }
+              >
                 {homeTeamStats.wins}
               </div>
-              <div className="row-start-3 col-start-3 py-2">
+
+              <div
+                className={
+                  awayTeamStats.wins > homeTeamStats.wins
+                    ? "row-start-3 col-start-3 py-2 font-bold"
+                    : "row-start-3 col-start-3 py-2"
+                }
+              >
                 {awayTeamStats.wins}
               </div>
               <div className="row-start-4 col-start-2 py-2">Draws</div>
-              <div className="row-start-4 col-start-1 py-2">
+              <div
+                className={
+                  homeTeamStats.draws > awayTeamStats.draws
+                    ? "row-start-4 col-start-1 py-2 font-bold"
+                    : "row-start-4 col-start-1 py-2"
+                }
+              >
                 {homeTeamStats.draws}
               </div>
-              <div className="row-start-4 col-start-3 py-2">
+              <div
+                className={
+                  awayTeamStats.draws > homeTeamStats.draws
+                    ? "row-start-4 col-start-3 py-2 font-bold"
+                    : "row-start-4 col-start-3 py-2"
+                }
+              >
                 {awayTeamStats.draws}
               </div>
+
               <div className="row-start-5 col-start-2 py-2">Losses</div>
-              <div className="row-start-5 col-start-1 py-2">
+              <div
+                className={
+                  homeTeamStats.losses < awayTeamStats.losses
+                    ? "row-start-5 col-start-1 py-2 font-bold"
+                    : "row-start-5 col-start-1 py-2"
+                }
+              >
                 {homeTeamStats.losses}
               </div>
-              <div className="row-start-5 col-start-3 py-2">
+              <div
+                className={
+                  awayTeamStats.losses < homeTeamStats.losses
+                    ? "row-start-5 col-start-3 py-2 font-bold"
+                    : "row-start-5 col-start-3 py-2"
+                }
+              >
                 {awayTeamStats.losses}
               </div>
               <div className="row-start-6 col-start-2 py-2">
                 Goal difference
               </div>
-              <div className="row-start-6 col-start-1 py-2">
+              <div
+                className={
+                  homeTeamStats.goalDifference > awayTeamStats.goalDifference
+                    ? "row-start-6 col-start-1 py-2 font-bold"
+                    : "row-start-6 col-start-1 py-2"
+                }
+              >
                 {homeTeamStats.goalDifference}
               </div>
-              <div className="row-start-6 col-start-3 py-2">
+              <div
+                className={
+                  awayTeamStats.goalDifference > homeTeamStats.goalDifference
+                    ? "row-start-6 col-start-3 py-2 font-bold"
+                    : "row-start-6 col-start-3 py-2"
+                }
+              >
                 {awayTeamStats.goalDifference}
               </div>
               <div className="row-start-7 col-start-2 py-2">
                 Avg goals scored per match
               </div>
-              <div className="row-start-7 col-start-1 py-2">
-                {homeTeamStats.goalsScored / homeTeamStats.played}
+              <div
+                className={
+                  homeTeamStats.avgScored > awayTeamStats.avgScored
+                    ? "row-start-7 col-start-1 py-2 font-bold"
+                    : "row-start-7 col-start-1 py-2"
+                }
+              >
+                {homeTeamStats.avgScored.toFixed(1)}
               </div>
-              <div className="row-start-7 col-start-3 py-2">
-                {awayTeamStats.goalsScored / awayTeamStats.played}
+              <div
+                className={
+                  awayTeamStats.avgScored > homeTeamStats.avgScored
+                    ? "row-start-7 col-start-3 py-2 font-bold"
+                    : "row-start-7 col-start-3 py-2"
+                }
+              >
+                {awayTeamStats.avgScored.toFixed(1)}
               </div>
               <div className="row-start-8 col-start-2 py-2">
                 Avg goals conceded per match
               </div>
-              <div className="row-start-8 col-start-1 py-2">
-                {homeTeamStats.goalsAgainst / homeTeamStats.played}
+              <div
+                className={
+                  homeTeamStats.avgAgainst < awayTeamStats.avgAgainst
+                    ? "row-start-8 col-start-1 py-2 font-bold"
+                    : "row-start-8 col-start-1 py-2"
+                }
+              >
+                {homeTeamStats.avgAgainst.toFixed(1)}
               </div>
-              <div className="row-start-8 col-start-3 py-2">
-                {awayTeamStats.goalsAgainst / awayTeamStats.played}
+              <div
+                className={
+                  awayTeamStats.avgAgainst < homeTeamStats.avgAgainst
+                    ? "row-start-8 col-start-3 py-2 font-bold"
+                    : "row-start-8 col-start-3 py-2"
+                }
+              >
+                {awayTeamStats.avgAgainst.toFixed(1)}
               </div>
+              <div className="col-span-3 col-start-1 row-start-3 border-t border-gray-200"></div>
+              <div className="col-span-3 col-start-1 row-start-4 border-t border-gray-200"></div>
+              <div className="col-span-3 col-start-1 row-start-5 border-t border-gray-200"></div>
+              <div className="col-span-3 col-start-1 row-start-6 border-t border-gray-200"></div>
+              <div className="col-span-3 col-start-1 row-start-7 border-t border-gray-200"></div>
+              <div className="col-span-3 col-start-1 row-start-8 border-t border-gray-200"></div>
             </div>
           </div>
         </div>

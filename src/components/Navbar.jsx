@@ -33,16 +33,28 @@ function Navbar() {
                 className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
               >
                 <li>
-                  <Link to="/schedule">Schedule</Link>
+                  <Link to="/schedule">Schedule & Results</Link>
                 </li>
                 <li>
                   <Link>About</Link>
                   <ul className="p-2">
                     <li>
-                      <a>Submenu 1</a>
+                      <Link to="/register">Register</Link>
                     </li>
                     <li>
-                      <a>Submenu 2</a>
+                      <Link to="who-we-are">Who we are</Link>
+                    </li>
+                    <li>
+                      <Link to="game-rules">Game rules</Link>
+                    </li>
+                    <li>
+                      <Link to="tournament-format">Tournament format</Link>
+                    </li>
+                    <li>
+                      <Link to="prize-money">Prize money</Link>
+                    </li>
+                    <li>
+                      <Link to="eligibility">Eligibility</Link>
                     </li>
                   </ul>
                 </li>
@@ -61,17 +73,29 @@ function Navbar() {
           <div className="navbar-center hidden md:flex">
             <ul className="menu menu-horizontal px-1">
               <li>
-                <Link to="/schedule">Schedule</Link>
+                <Link to="/schedule">Schedule & Results</Link>
               </li>
               <li>
                 <details>
                   <summary>About</summary>
                   <ul className="p-2">
                     <li>
-                      <Link>Sub menu1</Link>
+                      <Link to="/register">Register</Link>
                     </li>
                     <li>
-                      <Link>Sub menu2</Link>
+                      <Link to="who-we-are">Who we are</Link>
+                    </li>
+                    <li>
+                      <Link to="game-rules">Game rules</Link>
+                    </li>
+                    <li>
+                      <Link to="tournament-format">Tournament format</Link>
+                    </li>
+                    <li>
+                      <Link to="prize-money">Prize money</Link>
+                    </li>
+                    <li>
+                      <Link to="eligibility">Eligibility</Link>
                     </li>
                   </ul>
                 </details>

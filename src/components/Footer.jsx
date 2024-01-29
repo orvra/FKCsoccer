@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -8,18 +9,37 @@ function Footer() {
         <p>Footy King Championship Ltd.</p>
       </aside>
       <nav>
-        <header className="footer-title">Services</header>
-        <a className="link link-hover">Branding</a>
-        <a className="link link-hover">Design</a>
-        <a className="link link-hover">Marketing</a>
-        <a className="link link-hover">Advertisement</a>
+        <header className="footer-title">FKC</header>
+        <Link to="/" className="link link-hover">
+          Home
+        </Link>
+        <Link to="/register" className="link link-hover">
+          Register
+        </Link>
+        <Link to="/schedule" className="link link-hover">
+          Schedule & Results
+        </Link>
+        <Link to="/standings" className="link link-hover">
+          Standings
+        </Link>
       </nav>
       <nav>
-        <header className="footer-title">Company</header>
-        <a className="link link-hover">About us</a>
-        <a className="link link-hover">Contact</a>
-        <a className="link link-hover">Jobs</a>
-        <a className="link link-hover">Press kit</a>
+        <header className="footer-title">About Us</header>
+        <Link to="/who-we-are" className="link link-hover">
+          Who we are
+        </Link>
+        <Link to="/game-rules" className="link link-hover">
+          Game rules
+        </Link>
+        <Link to="/tournament-format" className="link link-hover">
+          Tournament format
+        </Link>
+        <Link to="/prize-money" className="link link-hover">
+          Prize money
+        </Link>
+        <Link to="/eligibility" className="link link-hover">
+          Eligibility
+        </Link>
       </nav>
       <nav>
         <header className="footer-title">Legal</header>

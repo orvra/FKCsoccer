@@ -21,16 +21,14 @@ function MapGames({ games }) {
                 .map((gameOnDate, index) => {
                   return (
                     <Link
+                      key={index + 20}
                       to={`/matches/${gameOnDate.id}--${teamsData[
                         gameOnDate.homeTeam - 1
                       ].name.replace(/\s/g, "-")}-${teamsData[
                         gameOnDate.awayTeam - 1
                       ].name.replace(/\s/g, "-")}`}
                     >
-                      <div
-                        key={index}
-                        className="pb-3 pt-2 px-3 h-[110px] bg-white rounded border border-slate-200 grid grid-cols-3 hover:cursor-pointer"
-                      >
+                      <div className="pb-3 pt-2 px-3 h-[110px] bg-white rounded border border-slate-200 grid grid-cols-3 hover:cursor-pointer">
                         <div className="space-y-2 col-span-2">
                           <p className="text-gray-500 text-[11px]">
                             Group {gameOnDate.group}

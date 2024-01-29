@@ -1,7 +1,5 @@
 import React, { Fragment } from "react";
 import groupsData from "../data/groupsData";
-import schedule from "../data/sched2";
-import results from "../data/results";
 import teamsData from "../data/teamsData";
 import teamResults from "../functions/teamResults";
 import { useWindowSize } from "@uidotdev/usehooks";

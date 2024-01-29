@@ -265,7 +265,7 @@ const schedule = [
   {
     id: 25,
     date: "2024-02-10",
-    time: "19:00", // 7:15 PM
+    time: "20:00", // 7:15 PM
     homeTeam: 9, // Team 2 vs Team 14
     awayTeam: 1,
     stadium: "Stadium A",

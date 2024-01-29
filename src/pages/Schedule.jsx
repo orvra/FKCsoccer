@@ -22,7 +22,7 @@ function Schedule() {
           Schedule & Results
         </h1>
       </div>
-      <div className="bg-[#f1f3f8] text-black pt-6">
+      <div className="bg-[#f1f3f8] text-black pt-6 pb-10">
         <div className="container mx-auto px-3">
           <MapGames games={sortedDates} />
         </div>

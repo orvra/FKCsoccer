@@ -27,9 +27,19 @@ function MatchHero({ matchId = 1, result = 1 }) {
               className="h-8 md:h-11"
             />
           </div>
-          <h1 className="px-3 font-medium md:px-5">
-            {schedule[matchId - 1].time}
-          </h1>
+
+          {results[matchId - 1].homeTeamScore === "TBD" ||
+          results[matchId - 1].awayTeamScore === "TBD" ? (
+            <h1 className="px-3 font-medium md:px-5">
+              {schedule[matchId - 1].time}
+            </h1>
+          ) : (
+            <h1 className="px-1 font-medium text-xl md:text-3xl md:px-3">{`${
+              results[matchId - 1].homeTeamScore
+            } -
+                ${results[matchId - 1].awayTeamScore}`}</h1>
+          )}
+
           <div className="flex-1 flex space-x-2 items-center md:space-x-3">
             <img
               src={teamsData[schedule[matchId - 1].awayTeam - 1].logo}
