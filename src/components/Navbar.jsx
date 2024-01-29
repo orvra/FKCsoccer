@@ -67,7 +67,7 @@ function Navbar() {
               to="/"
               className="btn btn-ghost text-xl py-1 flex md:-translate-x-2"
             >
-              <img src="/images/logo/FKC_v3.png" className="h-full" />
+              <img src="/FKCsoccer/images/logo/FKC_v3.png" className="h-full" />
             </Link>
           </div>
           <div className="navbar-center hidden md:flex">

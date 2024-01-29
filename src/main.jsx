@@ -8,7 +8,7 @@ const root = createRoot(document.getElementById("root"));
 
 root.render(
   <StrictMode>
-    <BrowserRouter basename="/">
+    <BrowserRouter basename="/FKCsoccer">
       <App />
     </BrowserRouter>
   </StrictMode>

@@ -11,7 +11,7 @@ function Eligibility() {
           <div className="bg-base-100 aspect-video w-full md:w-1/2 overflow-hidden rounded">
             <img
               className="w-full h-full object-cover"
-              src="/images/eligibility/eligibility_md.jpg"
+              src="/FKCsoccer/images/eligibility/eligibility_md.jpg"
               alt="eligibility"
             />
           </div>

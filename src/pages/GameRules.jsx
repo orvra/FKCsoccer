@@ -11,7 +11,7 @@ function GameRules() {
           <div className="bg-base-100 aspect-video w-full md:w-1/2 overflow-hidden rounded">
             <img
               className="w-full h-full object-cover"
-              src="/images/game%20rules/rules_md.jpg"
+              src="/FKCsoccer/images/game%20rules/rules_md.jpg"
               alt="game rules"
             />
           </div>

@@ -11,7 +11,7 @@ function WhoWeAre() {
           <div className="bg-base-100 aspect-video w-full md:w-1/2 overflow-hidden rounded">
             <img
               className="w-full h-full object-scale-down -translate-y-5"
-              src="/images/who%20we%20are/FKC_v2.png"
+              src="/FKCsoccer/images/who%20we%20are/FKC_v2.png"
             />
           </div>
 

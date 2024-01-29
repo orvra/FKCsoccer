@@ -11,7 +11,7 @@ function TournamentFormat() {
           <div className="bg-base-100 aspect-video w-full md:w-1/2 overflow-hidden rounded">
             <img
               className="w-full h-full object-scale-down"
-              src="/images/tournament%20format/pitches_md.jpg"
+              src="/FKCsoccer/images/tournament%20format/pitches_md.jpg"
               alt="pitches"
             />
           </div>

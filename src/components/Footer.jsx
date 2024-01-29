@@ -1,11 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { BsTwitterX, BsInstagram, BsFacebook } from "react-icons/bs";
 
 function Footer() {
   return (
     <footer className="footer px-4 py-10 bg-base-100 text-base-content">
       <aside>
-        <img className="w-20" src="/images/logo/FKC_v3.png" alt="logo" />
+        <img
+          className="w-20"
+          src="/FKCsoccer/images/logo/FKC_v3.png"
+          alt="logo"
+        />
         <p>Footy King Championship Ltd.</p>
       </aside>
       <nav>
@@ -42,10 +47,18 @@ function Footer() {
         </Link>
       </nav>
       <nav>
-        <header className="footer-title">Legal</header>
-        <a className="link link-hover">Terms of use</a>
-        <a className="link link-hover">Privacy policy</a>
-        <a className="link link-hover">Cookie policy</a>
+        <header className="footer-title">Social</header>
+        <div className="flex space-x-4 text-xl items-center">
+          <a className="link link-hover text-lg">
+            <BsTwitterX />
+          </a>
+          <a className="link link-hover text-lg">
+            <BsInstagram />
+          </a>
+          <a className="link link-hover">
+            <BsFacebook />
+          </a>
+        </div>
       </nav>
     </footer>
   );

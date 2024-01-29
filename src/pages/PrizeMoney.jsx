@@ -11,7 +11,7 @@ function PrizeMoney() {
           <div className="bg-base-100 aspect-video w-full md:w-1/2 overflow-hidden rounded">
             <img
               className="w-full h-full object-scale-down"
-              src="/images/prize%20money/ether_md.jpg"
+              src="/FKCsoccer/images/prize%20money/ether_md.jpg"
               alt="ether"
             />
           </div>
