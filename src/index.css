@@ -9,7 +9,7 @@
 
   color-scheme: light dark;
   color: white;
-  background-color: bg-base-100;
+
   box-sizing: border-box;
 
   font-synthesis: none;
@@ -61,7 +61,7 @@
 }
 
 .base-100 {
-  color: oklch(0.253267 0.015896 252.418);
+  color: #181925;
 }
 
 .input-box {

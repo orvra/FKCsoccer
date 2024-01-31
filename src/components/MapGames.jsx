@@ -36,17 +36,17 @@ function MapGames({ games }) {
                           <div className="flex justify-between">
                             <div className="flex items-center space-x-2">
                               <img
-                                className="h-7"
+                                className="h-6 sm:h-7"
                                 src={teamsData[gameOnDate.homeTeam - 1].logo}
                                 alt="logo"
                               />
-                              <h3 className="font-medium">
+                              <h3 className="font-medium text-xs sm:text-base">
                                 {teamsData[gameOnDate.homeTeam - 1].name}
                               </h3>
                             </div>
                             {results[gameOnDate.id - 1].homeTeamScore !==
                             "TBD" ? (
-                              <p className="font-medium pr-4">
+                              <p className="font-medium pr-4 text-xs sm:text-base">
                                 {results[gameOnDate.id - 1].homeTeamScore}
                               </p>
                             ) : null}
@@ -55,17 +55,17 @@ function MapGames({ games }) {
                           <div className="flex justify-between">
                             <div className="flex space-x-1.5">
                               <img
-                                className="h-7"
+                                className="h-6 sm:h-7"
                                 src={teamsData[gameOnDate.awayTeam - 1].logo}
                                 alt="logo"
                               />
-                              <h3 className="font-medium">
+                              <h3 className="font-medium text-xs sm:text-base">
                                 {teamsData[gameOnDate.awayTeam - 1].name}
                               </h3>
                             </div>
                             {results[gameOnDate.id - 1].awayTeamScore !==
                             "TBD" ? (
-                              <p className="font-medium pr-4">
+                              <p className="font-medium pr-4 text-xs sm:text-base">
                                 {results[gameOnDate.id - 1].awayTeamScore}
                               </p>
                             ) : null}
