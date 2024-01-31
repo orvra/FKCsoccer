@@ -18,7 +18,7 @@ function Schedule() {
   return (
     <div>
       <div className="container mx-auto px-3">
-        <h1 className="bg-base-100 text-3xl font-bold pb-7 pt-4">
+        <h1 className="custom-bg text-3xl font-bold pb-7 pt-4">
           Schedule & Results
         </h1>
       </div>

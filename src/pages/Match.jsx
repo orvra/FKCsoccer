@@ -1,9 +1,9 @@
 import React, { Fragment } from "react";
 import MatchHero from "../components/MatchHero";
 import { useParams } from "react-router-dom";
-import results from "../data/results";
+
 import teamsData from "../data/teamsData";
-import teamResults from "../functions/teamResults";
+
 import schedule from "../data/sched2";
 import FormGuide from "../components/FormGuide";
 import teamStatistics from "../functions/teamStatistics";

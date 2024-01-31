@@ -10,7 +10,7 @@ import HomeSchedule from "../components/HomeSchedule";
 function Home() {
   return (
     <>
-      <div className="bg-base-100">
+      <div className="custom-bg">
         <div className="container mx-auto">
           <div className="flex w-full justify-between items-center py-2">
             <div className="px-3 w-full md:w-[84%] md:px-8">
@@ -29,12 +29,14 @@ function Home() {
       </div>
 
       <div className="bg-gradient-to-b  from-blue-500 to-indigo-600">
-        <div className="container mx-auto px-3 mb-6">
+        <div className="container mx-auto px-3">
           <HomeHero />
         </div>
       </div>
-
-      <Standings darkTheme={true} />
+      <div className="pt-8 custom-bg">
+        {" "}
+        <Standings darkTheme={true} />
+      </div>
 
       <div className="bg-[#f1f3f8]">
         <div className="container mx-auto px-3">

@@ -69,14 +69,14 @@ function Standings({ darkTheme }) {
   const windowSize = useWindowSize();
   return (
     <div>
-      <div className="bg-base-100">
+      <div className="custom-bg">
         <div className="container mx-auto md:px-3">
           <h1 className="text-3xl font-bold pb-7 pt-4 px-4 md:px-0">
             Standings
           </h1>
         </div>
       </div>
-      <div className={darkTheme ? "bg-base-100" : "bg-[#f1f3f8]"}>
+      <div className={darkTheme ? "custom-bg" : "bg-[#f1f3f8]"}>
         <div className="container mx-auto">
           <div className="py-4 px-3">
             {windowSize.width > 650

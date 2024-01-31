@@ -30,7 +30,7 @@ function App() {
         <Route path="/matches/:matchId" element={<Match />} />
       </Routes>
 
-      <div className="bg-base-100">
+      <div className="custom-bg">
         <div className="container mx-auto">
           <Footer />
         </div>
