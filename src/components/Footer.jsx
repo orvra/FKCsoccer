@@ -4,7 +4,7 @@ import { BsTwitterX, BsInstagram, BsFacebook } from "react-icons/bs";
 
 function Footer() {
   return (
-    <footer className="footer px-4 py-10 custom-bg text-base-content">
+    <footer className="footer px-4 py-10 custom-bg text-gray-400">
       <aside>
         <img
           className="w-20"
