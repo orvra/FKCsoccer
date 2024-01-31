@@ -31,7 +31,7 @@ const Register = () => {
   return (
     <div className="bg-gradient-to-b from-teal-500 py-10">
       <div className="container mx-auto px-3">
-        <div className="py-10 bg-white base-100 max-w-[700px] mx-auto rounded-lg mb-10">
+        <div className="py-10 bg-white custom-bg max-w-[700px] mx-auto rounded-lg mb-10">
           <form
             onSubmit={handleSubmit}
             className="flex flex-col space-y-6 font-medium"
