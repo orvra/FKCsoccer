@@ -12,9 +12,9 @@ function HomeHero() {
             src="/FKCsoccer/images/hero/game2.jpg"
             alt="soccer"
           />
-          <div className="flex absolute bottom-0 left-0 pb-8 pl-2 sm:pl-8 font-medium text-2xl sm:text-3xl">
+          <div className="flex absolute bottom-0 left-0 pb-2 sm:pb-8 pl-2 sm:pl-8 font-medium text-2xl sm:text-3xl">
             <h2>Register</h2>
-            <IoIosArrowForward className="self-end group-hover:text-red-400" />
+            <IoIosArrowForward className="self-end -translate-y-0.5 sm:translate-y-0 group-hover:text-red-400" />
           </div>
         </Link>
       </div>

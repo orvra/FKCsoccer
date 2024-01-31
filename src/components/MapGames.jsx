@@ -53,7 +53,7 @@ function MapGames({ games }) {
                           </div>
 
                           <div className="flex justify-between">
-                            <div className="flex space-x-1.5">
+                            <div className="flex items-center space-x-1.5">
                               <img
                                 className="h-6 sm:h-7"
                                 src={teamsData[gameOnDate.awayTeam - 1].logo}
