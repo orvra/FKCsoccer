@@ -39,7 +39,7 @@ function Match() {
             <h1 className="pt-8 pb-5 font-bold text-3xl base-100">
               Team Stats
             </h1>
-            <div className="grid grid-cols-3 w-[95%] max-w-[650px] border border-gray-300 rounded base-100 pt-3 pb-1 my-2 text-xs bg-white text-center grid-container">
+            <div className="grid grid-cols-3 w-[95%] max-w-[650px] border border-gray-300 rounded base-100 pt-3 pb-1 my-2 text-xs bg-white text-center grid-container mb-10">
               <div className="flex pb-2 justify-center space-x-2 border-b">
                 <h2 className="font-medium text-sm">
                   {teamsData[homeTeamStats.id - 1].name}

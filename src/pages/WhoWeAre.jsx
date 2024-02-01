@@ -8,7 +8,7 @@ function WhoWeAre() {
           Footy King Championship: Who we are and why we created this league
         </h1>
         <div className="space-y-6">
-          <div className="bg-base-100 aspect-video w-full md:w-1/2 overflow-hidden rounded">
+          <div className="custom-bg aspect-video w-full md:w-1/2 overflow-hidden rounded">
             <img
               className="w-full h-full object-scale-down -translate-y-5"
               src="/FKCsoccer/images/who%20we%20are/FKC_v2.png"

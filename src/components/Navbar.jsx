@@ -73,7 +73,10 @@ function Navbar() {
           <div className="navbar-center hidden md:flex">
             <ul className="menu menu-horizontal px-1">
               <li>
-                <Link to="/schedule">Schedule & Results</Link>
+                <Link to="/schedule">Schedule</Link>
+              </li>
+              <li>
+                <Link to="/schedule">Results</Link>
               </li>
               <li>
                 <details>
