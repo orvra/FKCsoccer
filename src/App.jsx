@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import { Routes, Route, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import Schedule from "./pages/Schedule";
 import Footer from "./components/Footer";
 import Standings from "./pages/Standings";
