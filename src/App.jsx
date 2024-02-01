@@ -1,6 +1,6 @@
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Schedule from "./pages/Schedule";
 import Footer from "./components/Footer";
 import Standings from "./pages/Standings";
@@ -13,6 +13,11 @@ import Register from "./pages/Register";
 import Match from "./pages/Match";
 
 function App() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
     <>
       <Navbar />
