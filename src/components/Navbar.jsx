@@ -33,7 +33,10 @@ function Navbar() {
                 className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow custom-bg rounded-box w-52"
               >
                 <li>
-                  <Link to="/schedule">Schedule & Results</Link>
+                  <Link to="/schedule">Schedule</Link>
+                </li>
+                <li>
+                  <Link to="/standings">Standings</Link>
                 </li>
                 <li>
                   <Link>About</Link>
@@ -58,9 +61,6 @@ function Navbar() {
                     </li>
                   </ul>
                 </li>
-                <li>
-                  <Link to="/standings">Standings</Link>
-                </li>
               </ul>
             </div>
             <Link
@@ -75,8 +75,9 @@ function Navbar() {
               <li>
                 <Link to="/schedule">Schedule</Link>
               </li>
+
               <li>
-                <Link to="/schedule">Results</Link>
+                <Link to="/standings">Standings</Link>
               </li>
               <li>
                 <details>
@@ -102,9 +103,6 @@ function Navbar() {
                     </li>
                   </ul>
                 </details>
-              </li>
-              <li>
-                <Link to="/standings">Standings</Link>
               </li>
             </ul>
           </div>
